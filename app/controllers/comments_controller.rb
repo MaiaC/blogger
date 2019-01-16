@@ -11,4 +11,6 @@ class CommentsController < ApplicationController
     redirect_to article_path(@comment.article)
   end
 
+  before_action :require_login, except: [:create]
+
 end

@@ -15,4 +15,6 @@ class TagsController < ApplicationController
     redirect_to tags_path
   end
 
+  before_action :require_login, only: [:destroy]
+
 end
